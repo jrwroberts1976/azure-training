@@ -1,59 +1,241 @@
 # Microsoft Azure Training
 
-A structured, hands-on Azure training course designed to build practical cloud administration and engineering skills using Microsoft Azure.
+Welcome to the **Microsoft Azure Training** repository.
 
----
+This course provides a practical, hands-on learning path for Microsoft Azure cloud administration, infrastructure engineering, security, automation, and DevOps practices.
 
-# Purpose
+The goal is to develop the skills required for roles such as:
 
-This repository provides a guided learning path covering the core Azure services used by cloud engineers, system administrators, and DevOps professionals.
+- Azure Administrator
+- Cloud Engineer
+- Infrastructure Engineer
+- DevOps Engineer
+- Cloud Solutions Architect
 
-The aim is to gain real-world Azure experience through practical labs, documentation, and projects while preparing for Microsoft certifications.
+This repository documents the learning journey through practical labs, projects, automation, and real-world Azure deployments.
 
 ---
 
 # Learning Objectives
 
-By completing this course you will be able to:
+By completing this course you will learn how to:
 
-- Understand Azure core concepts
-- Deploy and manage Azure resources
-- Design secure cloud environments
-- Configure networking
-- Implement identity management
-- Deploy virtual machines
-- Build highly available solutions
-- Monitor Azure environments
-- Automate deployments
-- Manage storage and databases
-- Implement backup and disaster recovery
-- Understand governance and compliance
-- Prepare for Microsoft certification exams
-
----
-
-# Recommended Certifications
-
-This course aligns closely with:
-
-- AZ-900 — Microsoft Azure Fundamentals
-- AZ-104 — Azure Administrator Associate
-- AZ-305 — Azure Solutions Architect Expert
-- AZ-500 — Azure Security Engineer Associate
-- AZ-400 — DevOps Engineer Expert
+- Understand Microsoft Azure cloud concepts
+- Manage Azure subscriptions and resources
+- Configure Microsoft Entra ID
+- Implement Azure networking
+- Deploy and manage virtual machines
+- Configure Azure storage
+- Deploy applications using Azure services
+- Manage containers and Kubernetes
+- Implement monitoring and security
+- Automate Azure deployments
+- Use Infrastructure as Code
+- Manage cloud costs
+- Design secure and resilient cloud environments
 
 ---
 
 # Prerequisites
 
-Before starting you should be comfortable with:
+Before starting this course you should have a basic understanding of:
 
-- Basic computer networking
+## Operating Systems
+
+Recommended knowledge:
+
 - Windows administration
 - Linux administration
-- Command line (PowerShell and Bash)
-- Basic Git knowledge
-- Basic virtualization concepts
+- Command line usage
+- File permissions
+- Services and processes
+
+---
+
+## Networking Fundamentals
+
+You should understand:
+
+- IP addressing
+- Subnets
+- DNS
+- DHCP
+- Routing
+- Firewalls
+- Ports and protocols
+- TCP/IP concepts
+
+Recommended protocols:
+
+- HTTP/HTTPS
+- SSH
+- RDP
+
+---
+
+## Virtualisation
+
+Basic understanding of:
+
+- Virtual machines
+- Hypervisors
+- Virtual networking
+- Storage concepts
+
+Examples:
+
+- VMware
+- Hyper-V
+- VirtualBox
+- KVM
+
+---
+
+## Scripting Knowledge
+
+Helpful but not mandatory:
+
+- Bash scripting
+- PowerShell
+- Python basics
+- JSON/YAML syntax
+
+---
+
+## Cloud Fundamentals
+
+Recommended knowledge:
+
+- Cloud computing concepts
+- IaaS
+- PaaS
+- SaaS
+- Public vs private cloud
+- Shared responsibility model
+
+---
+
+# Required Accounts
+
+You will need:
+
+- Microsoft Account
+- Azure Subscription
+
+Azure Free Account:
+
+https://azure.microsoft.com/free/
+
+The free tier provides enough resources to complete many of the labs in this course.
+
+---
+
+# Required Tools
+
+## Git
+
+Used for version control.
+
+Verify installation:
+
+```bash
+git --version
+```
+
+---
+
+## Visual Studio Code
+
+Used for:
+
+- Azure development
+- Terraform
+- Bicep
+- Documentation
+- Scripts
+
+Recommended extensions:
+
+- Azure Account
+- Azure Resources
+- Azure CLI Tools
+- Azure Terraform
+- Bicep
+
+---
+
+## Azure CLI
+
+Used for Azure administration from the command line.
+
+Verify:
+
+```bash
+az --version
+```
+
+Login:
+
+```bash
+az login
+```
+
+---
+
+## PowerShell
+
+Used for:
+
+- Azure administration
+- Automation
+- Scripting
+
+Check version:
+
+```powershell
+$PSVersionTable
+```
+
+---
+
+## Terraform
+
+Used for Infrastructure as Code.
+
+Verify:
+
+```bash
+terraform version
+```
+
+---
+
+## Docker
+
+Used for container modules.
+
+Verify:
+
+```bash
+docker version
+```
+
+---
+
+# Recommended Hardware
+
+Minimum:
+
+- 8GB RAM
+- 20GB free storage
+- Internet connection
+
+Recommended:
+
+- 16GB RAM
+- Linux workstation or WSL2
+- Visual Studio Code
+- GitHub account
 
 ---
 
@@ -61,157 +243,181 @@ Before starting you should be comfortable with:
 
 ```
 azure-training/
-│
-├── 01-Azure-Fundamentals
-├── 02-Azure-Portal
-├── 03-Resource-Groups
-├── 04-Identity-and-Entra-ID
-├── 05-Subscriptions-and-Governance
-├── 06-Azure-CLI
-├── 07-Azure-PowerShell
-├── 08-Virtual-Networks
-├── 09-Network-Security-Groups
-├── 10-Virtual-Machines
-├── 11-Storage-Accounts
-├── 12-Azure-Files-and-Blobs
-├── 13-App-Services
-├── 14-Databases
-├── 15-Load-Balancing
-├── 16-Containers-and-ACI
-├── 17-Azure-Kubernetes-Service
-├── 18-Monitoring
-├── 19-Backup-and-Recovery
-├── 20-Azure-Policy
-├── 21-RBAC
-├── 22-Key-Vault
-├── 23-Terraform
-├── 24-Bicep
-├── 25-Automation
-├── 26-Cost-Management
-├── 27-Security-Center
-├── 28-Final-Project
-│
-├── docs
-├── labs
-├── scripts
-├── diagrams
-└── README.md
+
+├── README.md
+
+├── modules/
+
+│   ├── module-01-azure-fundamentals
+│   ├── module-02-azure-portal
+│   ├── module-03-resource-management
+│   ├── module-04-entra-id
+│   ├── module-05-governance
+│   ├── module-06-azure-cli
+│   ├── module-07-powershell
+│   ├── module-08-networking
+│   ├── module-09-security
+│   ├── module-10-virtual-machines
+│   ├── module-11-storage
+│   ├── module-12-databases
+│   ├── module-13-app-services
+│   ├── module-14-containers
+│   ├── module-15-aks
+│   ├── module-16-monitoring
+│   ├── module-17-backup-recovery
+│   ├── module-18-key-vault
+│   ├── module-19-infrastructure-as-code
+│   ├── module-20-automation
+│   ├── module-21-cost-management
+│   └── module-22-final-project
+
+├── labs/
+
+├── scripts/
+
+├── diagrams/
+
+├── projects/
+
+└── docs/
 ```
 
 ---
 
-# Modules
+# Learning Modules
 
-## Module 1 – Azure Fundamentals
+## Module 01 - Azure Fundamentals
 
-- Cloud concepts
-- Regions
+Topics:
+
+- Cloud computing concepts
+- Azure regions
 - Availability Zones
-- Resource Manager
 - Azure services overview
+- Resource Manager
 
 ---
 
-## Module 2 – Azure Portal
+## Module 02 - Azure Portal
 
-- Navigation
+Topics:
+
+- Azure Portal navigation
 - Cloud Shell
-- Resource creation
+- Creating resources
+- Managing resources
 - Dashboards
-- Resource management
 
 ---
 
-## Module 3 – Resource Groups
+## Module 03 - Resource Management
 
-- Creating resource groups
-- Resource organisation
+Topics:
+
+- Resource Groups
+- Subscriptions
 - Tags
 - Naming standards
-- Lifecycle management
+- Resource lifecycle
 
 ---
 
-## Module 4 – Microsoft Entra ID
+## Module 04 - Microsoft Entra ID
+
+Topics:
 
 - Users
 - Groups
 - Roles
 - Authentication
-- Multi-Factor Authentication
+- MFA
 - Conditional Access
 
 ---
 
-## Module 5 – Governance
+## Module 05 - Governance
 
-- Subscriptions
+Topics:
+
 - Management Groups
 - Azure Policy
 - Resource Locks
-- Cost Management
+- Compliance
+- Cost controls
 
 ---
 
-## Module 6 – Azure CLI
+## Module 06 - Azure CLI
 
-- Installation
+Topics:
+
+- Azure CLI installation
 - Authentication
-- Resource deployment
-- Automation
-- Scripting
-
----
-
-## Module 7 – Azure PowerShell
-
-- Modules
-- Authentication
-- Automation
 - Resource management
+- Automation scripts
 
 ---
 
-## Module 8 – Networking
+## Module 07 - PowerShell
 
-- VNets
+Topics:
+
+- Azure PowerShell modules
+- Automation
+- Administration scripts
+
+---
+
+## Module 08 - Networking
+
+Topics:
+
+- Virtual Networks
 - Subnets
 - DNS
-- Route Tables
+- Routing
+- Network Security Groups
 - Peering
 
 ---
 
-## Module 9 – Network Security
+## Module 09 - Security
 
-- Network Security Groups
+Topics:
+
 - Azure Firewall
-- Bastion
+- Defender for Cloud
 - Private Endpoints
+- Security recommendations
 
 ---
 
-## Module 10 – Virtual Machines
+## Module 10 - Virtual Machines
 
-- Windows VMs
+Topics:
+
 - Linux VMs
+- Windows VMs
 - Availability Sets
 - Scale Sets
 - Extensions
 
 ---
 
-## Module 11 – Storage
+## Module 11 - Storage
 
+Topics:
+
+- Storage Accounts
 - Blob Storage
-- File Storage
-- Queues
-- Tables
-- Storage tiers
+- File Shares
+- Storage Tiers
 
 ---
 
-## Module 12 – Databases
+## Module 12 - Databases
+
+Topics:
 
 - Azure SQL
 - PostgreSQL
@@ -220,34 +426,42 @@ azure-training/
 
 ---
 
-## Module 13 – App Services
+## Module 13 - Application Services
 
-- Web Apps
+Topics:
+
+- App Service
 - Deployment Slots
-- Custom Domains
 - Certificates
+- Domains
 
 ---
 
-## Module 14 – Containers
+## Module 14 - Containers
 
+Topics:
+
+- Docker
 - Azure Container Instances
-- Azure Container Registry
-- Docker basics
+- Container Registry
 
 ---
 
-## Module 15 – Azure Kubernetes Service
+## Module 15 - Azure Kubernetes Service
 
-- AKS clusters
-- Deployments
+Topics:
+
+- AKS deployment
+- Kubernetes workloads
 - Services
 - Scaling
-- Upgrades
+- Updates
 
 ---
 
-## Module 16 – Monitoring
+## Module 16 - Monitoring
+
+Topics:
 
 - Azure Monitor
 - Log Analytics
@@ -257,26 +471,31 @@ azure-training/
 
 ---
 
-## Module 17 – Backup
+## Module 17 - Backup and Recovery
 
-- Recovery Services Vault
+Topics:
+
+- Recovery Vaults
 - VM Backup
 - Restore
-- Site Recovery
+- Disaster Recovery
 
 ---
 
-## Module 18 – Security
+## Module 18 - Key Vault
 
-- Microsoft Defender for Cloud
-- Key Vault
+Topics:
+
 - Secrets
 - Certificates
+- Keys
 - Managed Identity
 
 ---
 
-## Module 19 – Infrastructure as Code
+## Module 19 - Infrastructure as Code
+
+Topics:
 
 - ARM Templates
 - Bicep
@@ -284,112 +503,110 @@ azure-training/
 
 ---
 
-## Module 20 – Automation
+## Module 20 - Automation
+
+Topics:
 
 - Azure Automation
-- Logic Apps
 - Runbooks
-- Scheduled Tasks
+- Logic Apps
+- Scheduled tasks
 
 ---
 
-## Module 21 – Cost Optimisation
+## Module 21 - Cost Management
 
-- Azure Advisor
-- Budgets
+Topics:
+
 - Cost Analysis
-- Reservations
-- Savings Plans
+- Budgets
+- Azure Advisor
+- Optimisation
 
 ---
 
-## Module 22 – Final Project
+# Final Project
 
 Build a complete Azure environment including:
 
-- Virtual Network
-- Multiple Subnets
-- Linux VM
-- Windows VM
+- Azure Virtual Network
+- Multiple subnets
+- Linux Virtual Machine
+- Windows Virtual Machine
 - Storage Account
-- Azure SQL Database
-- App Service
+- Database service
+- Application hosting
 - Monitoring
 - Backup
 - RBAC
 - Key Vault
-- Terraform deployment
+- Infrastructure as Code deployment
 
 ---
 
-# Hands-on Labs
+# Certification Path
 
-Every module should include:
+This course supports preparation for:
 
-- Objectives
-- Architecture diagram
-- Step-by-step walkthrough
-- Challenge exercise
-- Troubleshooting
-- Further reading
+## AZ-900
+Microsoft Azure Fundamentals
 
----
+## AZ-104
+Azure Administrator Associate
 
-# Tools Used
+## AZ-305
+Azure Solutions Architect Expert
 
-- Azure Portal
-- Azure CLI
-- Azure PowerShell
-- Visual Studio Code
-- Terraform
-- Bicep
-- Git
-- GitHub
-- Windows Terminal
-- PowerShell
-- Bash
+## AZ-500
+Azure Security Engineer Associate
+
+## AZ-400
+DevOps Engineer Expert
 
 ---
 
-# Repository Layout
+# Portfolio Goals
 
-```
-docs/
-    Notes
-    Architecture
-    Study Guides
+By completing this repository you will have evidence of:
 
-labs/
-    Individual lab exercises
+- Cloud administration skills
+- Azure infrastructure deployment
+- Automation experience
+- Infrastructure as Code
+- Security implementation
+- Monitoring configuration
+- Troubleshooting ability
+- Documentation skills
 
-scripts/
-    PowerShell
-    Bash
-    Azure CLI
+---
 
-diagrams/
-    Network diagrams
-    Architecture diagrams
+# Learning Method
 
-projects/
-    Final projects
-```
+Each module follows:
+
+1. Learn the concepts
+2. Complete practical labs
+3. Deploy Azure resources
+4. Automate tasks
+5. Document solutions
+6. Commit changes to GitHub
+7. Review and improve
 
 ---
 
 # Progress Tracker
 
 | Module | Status |
-|----------|--------|
+|---|---|
 | Azure Fundamentals | ☐ |
 | Azure Portal | ☐ |
-| Resource Groups | ☐ |
+| Resource Management | ☐ |
 | Entra ID | ☐ |
 | Governance | ☐ |
 | Azure CLI | ☐ |
 | PowerShell | ☐ |
 | Networking | ☐ |
-| NSGs | ☐ |
+| Security | ☐ |
 | Virtual Machines | ☐ |
 | Storage | ☐ |
 | Databases | ☐ |
@@ -398,7 +615,7 @@ projects/
 | AKS | ☐ |
 | Monitoring | ☐ |
 | Backup | ☐ |
-| Security | ☐ |
+| Key Vault | ☐ |
 | Terraform | ☐ |
 | Bicep | ☐ |
 | Automation | ☐ |
@@ -407,50 +624,12 @@ projects/
 
 ---
 
-# Recommended Study Time
-
-| Experience | Estimated Duration |
-|------------|-------------------|
-| Beginner | 8–10 weeks |
-| Intermediate | 5–6 weeks |
-| Experienced SysAdmin | 3–4 weeks |
-
----
-
-# Recommended Learning Approach
-
-For each module:
-
-1. Read the theory.
-2. Complete the lab exercises.
-3. Document your findings.
-4. Commit your work to Git.
-5. Review what you've learned.
-6. Build a small project using the new skills.
-
----
-
-# Goals
-
-Upon completion you should be able to:
-
-- Deploy production-ready Azure infrastructure
-- Secure Azure environments using best practices
-- Automate deployments with Infrastructure as Code
-- Troubleshoot Azure resources
-- Monitor cloud workloads
-- Control cloud costs
-- Design resilient architectures
-- Confidently administer Microsoft Azure environments
-
----
-
 # Licence
 
-This project is intended for personal learning and professional development.
+This repository is created for learning, training, and professional development.
 
-Feel free to fork, modify, and expand it as your Azure knowledge grows.
+Feel free to fork, modify, and expand as your Azure skills develop.
 
 ---
 
-**Happy learning, and welcome to Microsoft Azure! ☁️**
+**Happy learning Azure! ☁️*
